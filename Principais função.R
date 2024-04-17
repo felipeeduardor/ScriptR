@@ -9,6 +9,7 @@ head(esoph, n=10)
 
 #Dimensões
 dim(esoph)
+dim(esoph)[1]
 
 #se usar com objeto bidimensional vai retornar colunas
 length(islands)
@@ -22,3 +23,6 @@ rownames(esoph)
 # Resumo 
 summary(esoph)
 
+#escolher arquivo
+x =  file.choose()
+x
