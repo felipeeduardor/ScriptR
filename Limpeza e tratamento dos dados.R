@@ -159,3 +159,5 @@ dados[dados$Salario >= 2 *desv , ]$Salario = median(dados$Salario)
 
 #checamos se sairam os outliers
 dados[dados$Salario >= 2 *desv , ]$Salario
+
+
