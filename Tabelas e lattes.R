@@ -47,3 +47,31 @@ xyplot(CO2$conc ~ CO2$uptake)
 xyplot(CO2$conc ~ CO2$uptake | CO2$Type)
 #regrigerado ou não 
 xyplot(CO2$conc ~ CO2$uptake | CO2$Treatment)
+
+
+# cancer de esofago
+# agegp idade, alcgp : alcool , tobgp: tabaco
+dotplot(esoph$alcgp ~ esoph$ncontrols, data = esoph)
+dotplot(esoph$alcgp ~ esoph$ncontrols  | esoph$tobgp)
+
+#Matriz de dispensão
+splom(~CO2[4:5] | CO2$Type, CO2)
+
+# Densidade condicional 
+densityplot(~CO2$cont | CO2$Treatment,plot.points=FALSE)
+densityplot(CO2$conc)
+densityplot(~CO2$cont | CO2$Treatment)
+densityplot(~CO2$conc | CO2$Treatment,  plot.points=FALSE)
+
+
+# Gráfico 3D
+# Spray para repelir abelhas
+OrchardSprays
+cloud(decrease ~ rowpos * colpos, data=OrchardSprays)
+cloud(decrease ~ rowpos * colpos, groups = treatment, data = OrchardSprays)
+
+# Level plot
+# circunferencia, largura e volume de árvores
+
+trees
+levelplot(Girth ~ Height * Volume, data=trees)
